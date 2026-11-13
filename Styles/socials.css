@@ -1,0 +1,313 @@
+:root {
+  --dark: #0D0006;
+  --mid: #C9AF96;
+  --light: #FFFBE7;
+
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+
+font-family: 'Brush Script MT', cursive;
+}
+/* They see me scroolin' */
+html::-webkit-scrollbar{
+  width: 0.7em;
+}
+html::-webkit-scrollbar-track {
+  background: #0D0006;
+}
+html::-webkit-scrollbar-thumb {
+  background: #FFFBE7;
+  outline: 5px var(--dark);
+}
+
+@property --a{
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+@property --p {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 0%;
+}
+@property --c1 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #000;
+}
+@property --c2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #000;
+}
+
+html {
+  --s: 100px;
+  --_g: #0000, var(--c1) 180deg calc(var(--a) - 180deg),#0000 var(--a);
+  background:
+  conic-gradient(from calc(30deg  - var(--a)/2) at top    var(--p) left  var(--p),var(--_g)),
+  conic-gradient(from calc(-60deg  - var(--a)/2) at top    var(--p) right  var(--p),var(--_g)),
+  conic-gradient(from calc(-90deg  - var(--a)/2) at bottom    var(--p) right  var(--p),var(--_g)),
+
+  conic-gradient(from calc(120deg  - var(--a)/2) at bottom    var(--p) left  var(--p),var(--_g)),
+  var(--c2);
+  background-size: calc(3*var(--s)) calc(2*var(--s));
+  animation: m 30s infinite alternate ease-in-out;
+}
+
+@keyframes m {
+  0%{
+    --a: 0deg;
+    --p: 30%;
+    --c1: #FFFBE7;
+    --c2: #C9AF96;
+    background-position: 0 0,var(--s) var(--s);
+  }
+ 33% {
+    --a: 180deg;
+    --p: 60%;
+    --c1: #C9AF96;
+    --c2: #0D0006;
+    background-position: var(--s) var(--s), 0 0;
+  }
+  66% {
+    --a: 0deg;
+    --p: 30%;
+    --c1: #0D0006;
+    --c2: #C9AF96;
+    background-position: 0 0,var(--s) var(--s);
+  }
+  100% {
+    --a: -180deg;
+    --p: 60%;
+    --c1: #C9AF96;
+    --c2: #0D0006;
+    background-position: var(--s) var(--s), 0 0;
+  }
+}
+body {
+  width: 100%;
+
+  /*background-image:url("back.png");*/
+}
+main {
+  margin-left: 33%;
+  width: 33%;
+  background-color: var(--light);
+  border-radius: 2em;
+  margin-top: 2%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1400px) {
+  main{
+    margin-left: 25%;
+    width:50%;}
+}
+@media screen and (max-width: 1000px) {
+  main{
+
+    margin-top: 7%;
+    margin-left: 15%;
+    width:70%;}
+}
+@media screen and (max-width: 700px) {
+  html {
+    background:var(--light);
+    background-color:var(--light);
+  }
+  main{
+     margin-top: 0%;
+    margin-left: 0;
+    width:100%;}
+}
+.logo-button{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  transition: all 0.7s;
+}
+.logo-button:before {
+  font-size: 1.3em;
+  opacity:0;
+  z-index: 0;
+  color: var(--light);
+  position: absolute;
+  content: "ekierka.art";
+  padding: 3em;
+
+  border-radius: 30em 30em 0 0;
+  padding-top: 2em;
+
+  transition: all 0.7s;
+
+}
+
+
+.logo-button:hover::before {
+  font-size: 0.9em;
+  text-decoration: underline;
+  font-weight: 500;
+  color: var(--light);
+  opacity: 1;
+
+  transform: translateY(-50%);
+  background-color: var(--mid);
+  padding: 1.5%;
+
+  padding-top: 1.8em;
+  padding-bottom: 4em;
+  border-radius: 10em 10em 0 0;
+}
+
+
+img{
+  width:100%;
+  transition: 0.7s;
+
+}
+img:hover{
+  padding: 15%;
+  transform: translateY(10%);
+}
+
+@media screen and (max-width: 700px) {
+  .logo-button:before {
+   font-size: 1em;
+    padding: 1em;
+  }
+  img:hover{
+    padding: 10%;
+    transform: translateY(10%);
+  }
+}
+
+
+.social{
+  width:100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+
+  padding: 1em 10% 1em 10%;
+  margin-bottom:0em;
+}
+.social-button{
+  width:80%;
+  height:86%;
+  transition: 0.7s;
+  border-radius: 50%;
+  margin:4%;
+  top:0%;
+  background-color: var(--light);
+  border: 3px solid var(--dark);
+}
+
+.social-button:hover {
+
+  transform: rotateZ(-20deg);
+  background-color: var(--mid);
+  border: 3px solid var(--light);
+  top:0;
+
+}
+
+.social-button img{
+  margin-left:0%;
+  padding: 0em;
+  margin:20%;
+  width:60%;
+  height:auto;
+  transform: rotateZ(0deg);
+  transform: translateY(0%);
+
+}
+
+.links-button{
+  transition: 0.7s;
+  animation: buttonAnim 1s infinite;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 2em;
+  outline-color: var(--dark);
+  padding: 0.5em;
+  align-content: center;
+
+}
+
+.links-button:hover{
+
+  background-color: var(--mid);
+  margin: 0 0.4em 0 0.4em;
+
+  border: 2px solid var(--light);
+
+
+}
+
+.links-button:hover img.sIcon{
+  transform: rotateZ(-10deg);
+}
+
+img.sIcon{
+  align-content: center;
+  padding: 0.1em;
+  margin: 0 0 -0.3em 0;
+  height: 1.3em;
+  width: auto;
+
+  transition: 0.7s;
+}
+
+ul{
+  width: 100%;
+  color: var(--dark);
+
+  list-style-type: none;
+  padding: 0.5em;
+  padding-top: 0em;
+
+
+
+}
+
+ul li {
+  margin: 1em;
+  margin-top: 0em;
+  font-size: 1.5em;
+  text-align: center;
+  text-shadow: 2px 2px 6px grey;
+
+
+
+}
+
+ul li a{
+
+  font-style: normal;
+  text-decoration: none;
+  color:var(--dark);
+
+}
+
+
+@keyframes buttonAnim {
+  0%  {}
+  20% {}
+  40% {}
+  60% {}
+  80% {}
+  100% {}
+}
+
+
+
+
+
