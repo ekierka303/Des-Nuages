@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+
+
+
+    <link rel="stylesheet" type="text/css" href="Styles/image.css">
+    <link rel="stylesheet" type="text/css" href="Styles/modal.css">
+    <link rel="stylesheet" type="text/css" href="Styles/main.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    
+    <header>
+
+			<div>
+
+				<h1> Des Nuages </h1>
+                <h2> Eliza Kusińska </h2>
+			</div>
+
+	</header>
+
+
+    <main>
+      
+        <div class="gallery-type0" style="width: 100%">
+        <div class="grid">
+           <a href="00.html"> <img src="IMGS/01.webp"> </a>
+           <a href="01.html"> <img src="IMGS/02.webp"> </a>
+           <a href="02.html"> <img src="IMGS/03.webp"> </a>
+           <a href="03.html"> <img src="IMGS/04.webp"> </a>
+           <a href="04.html"> <img src="IMGS/05.webp"> </a>
+        </div>
+        </div>
+
+            <header id="szkice">
+
+			<div>
+
+				<h1> Des Nuages </h1>
+                <h2> Proces twórczy - szkice </h2>
+			</div>
+
+	</header>
+           <div  class="grid">
+                <div class="tile" ><img src="IMGS/szkice01.webp" style="width: 100%" onclick="openModal();currentSlide(1)"></div>
+                <div class="tile" ><img src="IMGS/szkice04.webp" style="width: 100%" onclick="openModal();currentSlide(2)"></div>
+                <div class="tile" ><img src="IMGS/szkice06.webp" style="width: 100%" onclick="openModal();currentSlide(3)"></div>
+                <div class="tile" ><img src="IMGS/szkice07.webp" style="width: 100%" onclick="openModal();currentSlide(4)"></div>
+                <div class="tile" ><img src="IMGS/szkice08.webp" style="width: 100%" onclick="openModal();currentSlide(5)"></div>
+
+            </div>
+
+
+            <!--Popup gallery -->
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                        <div class="mySlides">
+                            <div class="gallery-container">
+                                <div class="left-side"><img src="IMGS/szkice01.webp" style="width:100%"></div>
+                                <div class="right-side" > <h2>Piersze szkice i koncepty </h2>
+                                    <h3></br> Szkice ołówkiem na małym fomacie</h3></div>
+                                        <div class="img-disp">
+                                        <img src="IMGS/szkice03.webp">
+                                        </div>
+                            </div>
+                        </div>
+
+
+                    <div class="mySlides">
+                        <div class="gallery-container">
+                            <div class="left-side"><img src="IMGS/szkice04.webp" style="width:100%"></div>
+                            <div class="right-side" > <h2>Szkice cyfrowe </h2>
+                                <h3></br> Szkice cyfrowe </h3></div>
+                                        <div class="img-disp">
+                                        <img src="IMGS/szkice05.webp">
+                                        </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="mySlides">
+                        <div class="gallery-container">
+                            <div class="left-side"><img src="IMGS/szkice06.webp" style="width:100%"></div>
+                            <div class="right-side" > <h2>Szkice poszukujące formy </h2>
+                                <h3></br> Szkice na kartkach A3: </h3></div>
+
+
+                                <div class="img-disp">
+                                <h3>Szkice ołówkiem </h3>
+                                <img src="IMGS/a3-1.webp">
+                                <img src="IMGS/a3-2.webp">
+
+                                <h3>Szkic zielonym tuszem </h3>
+                                <img src="IMGS/a3-11.webp">
+
+                                <h3>Szkic szarym gwaszem </h3>
+                                <img src="IMGS/a3-12.webp">
+
+                                <h3>Szkice pastelą </h3>
+                                <img src="IMGS/a3-10.webp">
+                                <img src="IMGS/a3-13.webp">
+                                <img src="IMGS/a3-14.webp">
+
+                                <h3>Szkice gwaszem na kolorowym papierze</h3>
+                                <img src="IMGS/a3-7.webp">
+                                <img src="IMGS/a3-8.webp">
+                                <img src="IMGS/a3-9.webp">
+
+                                <h3>Szkice czarnym gwaszem</h3>
+                                <img src="IMGS/a3-6.webp">
+                                <img src="IMGS/a3-5.webp">
+                                <img src="IMGS/a3-4.webp">
+                                <img src="IMGS/a3-3.webp">
+
+                                </div>
+
+                        </div>
+                    </div>
+                    <div class="mySlides">
+                        <div class="gallery-container">
+                            <div class="left-side"><img src="IMGS/szkice07.webp" style="width:100%"></div>
+                            <div class="right-side" > <h2> Szkice węglowe </h2>
+                                <h3></br> Te małe szkice formatu zbliżonego do A5, miały być jednym z ostatnich etapów. </br></br> </h3>
+                            </div>
+                                <div class="img-disp">
+                                <img src="IMGS/s01.webp">
+                                <img src="IMGS/s02.webp">
+                                <img src="IMGS/s03.webp">
+                                <img src="IMGS/s04.webp">
+                                <img src="IMGS/s05.webp">
+                                <img src="IMGS/s06.webp">
+                                </div>
+                        </div>
+                        </div>
+                        <div class="mySlides">
+                        <div class="gallery-container">
+                            <div class="left-side"><img src="IMGS/szkice08.webp" style="width:100%"></div>
+                            <div class="right-side" ><h2> Ostateczne prace</h2>
+                                <h3></br> Ostateczny projekt obrazów w dwóch wersjach: achromatycznej i barwnej. </br></br> </h3></div>
+
+
+                                <div class="img-disp">
+                                <img src="IMGS/k1.webp">
+                                <img src="IMGS/k2.webp">
+                                <img src="IMGS/k3.webp">
+                                <img src="IMGS/k4.webp">
+                                <img src="IMGS/k5.webp">
+                                </div>
+
+                                <div class="img-disp">
+                                <img src="IMGS/01.webp">
+                                <img src="IMGS/02.webp">
+                                <img src="IMGS/03.webp">
+                                <img src="IMGS/04.webp">
+                                <img src="IMGS/05.webp">
+                                </div>
+                        </div>
+                        </div>
+
+
+                    <!-- Next/previous-->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Caption-->
+                    <div class="caption-container">
+                    <p id="caption"></p>
+                    </div>
+                </div>
+            </div>
+	</main>
+
+	<footer>
+
+		<div class= "end">
+		<h3></h3>
+		</div>
+		<h3> Miejscem wystawy jest Restauracja Kielecka. </br>Więcej informacji o miejscu znajdziesz na social media'ch:</h3>
+		<div class="social" style="padding-right: 0;">
+            <a href="https://www.facebook.com/restauracjakielecka/"  target="_blank"><div class="social-button"><img src="IMGS/facebook.png"></div></a>
+			<a href="https://www.google.com/maps/place/Restauracja+Kielecka/@50.8666158,20.6364474,19.62z/data=!4m14!1m7!3m6!1s0x47182791921f1da7:0x267acf8be333f46b!2sFilharmonia+%C5%9Awi%C4%99tokrzyska+im.+Oskara+Kolberga!8m2!3d50.8665175!4d20.6365245!16s%2Fg%2F120xjf3r!3m5!1s0x471827d017b03e21:0x5a664d1473442e51!8m2!3d50.8667061!4d20.6363611!16s%2Fg%2F11frqv938v?hl=pl&entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D"  target="_blank">
+			<div class="social-button"><img src="IMGS/maps.webp"></div>
+			</a>
+			<a href="mailto: info@restauracjakielecka.pl"  target="_blank">
+			<div class="social-button"><img src="IMGS/mail.webp"></div>
+			</a>
+
+       </div>
+<h3> Zobacz również inne prace i wydarzenia artsty: </h3>
+       		<div class="social">
+
+			<a href="https://cara.app/ekierka"  target="_blank">
+			<div class="social-button"><img src="IMGS/cara.webp"></div>
+			</a>
+			<a href="https://www.instagram.com/elizakusinska/"  target="_blank">
+			<div class="social-button"><img src="IMGS/inst.webp"></div>
+			</a>
+			<a href="https://www.youtube.com/@Ekierka"  target="_blank"><div class="social-button"><img src="IMGS/youtube.webp"></div></a>
+			<a href="https://ko-fi.com/ekierka"  target="_blank"><div class="social-button"><img src="IMGS/kofi.webp"></div></a>
+<!-- Można dodać konto na pixaby i tweeter/X w przyszłość -->
+       </div>
+       <div class= "end">
+		</div>
+
+		<h3>Copyright © 2026 Eliza Kusińska. All Rights Reserved. | Grafiki, tekst i prezentowane prace są chronione prawem autorskim. </br></br></h3>
+	</footer>
+
+
+  </body>
+
+<script src="JS/gallery01-script.js"></script>
+</html>
