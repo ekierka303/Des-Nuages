@@ -140,9 +140,6 @@ img {width: 100%;}
   .grid img:hover {
     cursor: pointer;
 
-    border-radius: 0.5em;
-    scale: 102%;
-
   }
   .grid .locked {
     display: none;
