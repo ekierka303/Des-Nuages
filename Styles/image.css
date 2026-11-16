@@ -34,14 +34,12 @@
 
 }
 .next{
-
   padding: 2em 0 3em 0;
   width: 100%;;
   background: none;
   text-align: center;
 }
 .next a{
-
   font-size: 1.6em;
   background: black;
 
@@ -49,6 +47,22 @@
   color: white;
   border-radius: 1em;
   padding: 1em 2em 1em 2em;
+}
+
+@media screen and (max-width: 900px) {
+  .next a {
+    font-size: 1em;
+    padding: 5%;
+
+  }
+}
+@media screen and (max-width: 800px) {
+  .next a {
+
+    font-size: 0.8em;
+    padding: 6%;
+
+  }
 }
 
 .disabled a{
